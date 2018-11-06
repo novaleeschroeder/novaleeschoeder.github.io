@@ -40,9 +40,6 @@ var init = function (window) {
         drawCircle()
         drawCircle()
 
-        var update = function() {
-        physikz.updatePosition(circles[0]);
-        }
         // TODO 7 : Create a Loop to call drawCircle 100 times
 
     
@@ -74,7 +71,11 @@ var init = function (window) {
     
         var update = function() {
             // TODO 4 : Update the circle's position //
-
+            physikz.updatePosition(circles[0]);
+            physikz.updatePosition(circles[1]);
+            physikz.updatePosition(circles[2]);
+            physikz.updatePosition(circles[3]);
+            physikz.updatePosition(circles[4]);
             
             // TODO 6 : Call checkCircleBounds on your circles.
            
