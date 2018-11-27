@@ -18,7 +18,7 @@ var background = function (window) {
 
         // container which will be returned
         var background;
-        
+        var tree;
         // Add any variables that will be used by render AND update here:
         
         // add objects for display inb ackground
@@ -55,7 +55,10 @@ var background = function (window) {
             
             
             // TODO 4: Part 1 - Add a tree
-            
+           tree = draw.bitmap('img/tree.png');
+tree.x = 200;
+tree.y = 100;
+background.addChild(tree);
         }
         
         // Perform background animation
@@ -67,8 +70,11 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 4: Part 2 - Move the tree!
-            
-            
+            tree.x = tree.x -1;
+            if(tree.x < -200) {
+    tree.x = canvasWidth;
+            } 
+
             // TODO 5: Part 2 - Parallax
             
 
